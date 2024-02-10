@@ -7,6 +7,10 @@ android {
     namespace = "com.example.automotiveapp"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.automotiveapp"
         minSdk = 28
@@ -37,9 +41,12 @@ android {
 
 dependencies {
 
+    val fragment_version = "1.6.2"
+
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
 }
