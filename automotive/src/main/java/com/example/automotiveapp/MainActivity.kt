@@ -4,11 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.automotiveapp.databinding.ActivityMainBinding
-import com.example.automotiveapp.fragments.Fragment1
-import com.example.automotiveapp.fragments.Fragment2
-import com.example.automotiveapp.fragments.Fragment3
-import com.example.automotiveapp.fragments.Fragment4
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +12,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+        // Initialize the binding using ViewBinding
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        //setContentView(R.layout.activity_main)
 
         binding.button1.setOnClickListener { loadFragment(Fragment1()) }
         binding.button2.setOnClickListener { loadFragment(Fragment2()) }
