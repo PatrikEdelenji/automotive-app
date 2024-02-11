@@ -17,12 +17,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //setContentView(R.layout.activity_main)
+        val buttonToFragmentMap = mapOf(
+            binding.button1 to Fragment1(),
+            binding.button2 to Fragment2(),
+            binding.button3 to Fragment3(),
+            binding.button4 to Fragment4()
+        )
 
-        binding.button1.setOnClickListener { loadFragment(Fragment1()) }
-        binding.button2.setOnClickListener { loadFragment(Fragment2()) }
-        binding.button3.setOnClickListener { loadFragment(Fragment3()) }
-        binding.button4.setOnClickListener { loadFragment(Fragment4()) }
+        buttonToFragmentMap.forEach { (button, fragment) ->
+            button.setOnClickListener { loadFragment(fragment) }
+        }
 
         loadFragment(Fragment1())
     }
