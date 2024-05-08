@@ -4,6 +4,14 @@
     <selectionStates>
       <SelectionState runConfigName="automotive">
         <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2024-05-07T20:50:02.019952300Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\patri\.android\avd\Automotive_1024p_landscape_API_29_Polestar.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
       </SelectionState>
     </selectionStates>
   </component>
